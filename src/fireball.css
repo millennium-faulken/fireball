@@ -1,0 +1,46 @@
+body {
+    text-align: center;
+}
+
+#map {
+  height: 450px;
+  width: 650px;
+  margin: 50px auto;
+}
+
+table {
+  border-collapse: collapse;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+td,
+th {
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  padding: 8px;
+  background-color: #dddddd;
+}
+
+.date,
+.energy {
+  width: 160px;
+  text-align: center;
+}
+
+.lat,
+.long,
+.vel {
+  width: 80px;
+  text-align: center;
+}
+
+tbody:nth-child(even) td {
+  background-color: #f2f2f2;
+}
+
+tbody {
+  border-bottom: 1px solid black;
+}
