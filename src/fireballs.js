@@ -8,7 +8,7 @@ function Fireballs() {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    fetch("https://ssd-api.jpl.nasa.gov/fireball.api?limit=15")
+    fetch("https://cryptic-headland-94862.herokuapp.com/https://ssd-api.jpl.nasa.gov/fireball.api?limit=15")
       .then((res) => res.json())
       .then(
         (result) => {
