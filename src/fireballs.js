@@ -39,13 +39,15 @@ function Fireballs() {
           />
           {items.map((item, index) => {
             if (item[4] === "S") {
-              item[3] = -item[3];
+              item[3] = -Math.abs(item[3])
+              // item[3].replace((-item[3]))
             } else if (item[6] === "W") {
-              item[5] = -item[5];
+              item[5] = -Math.abs(item[5])
             } else if (!item[3]) {
               item[3] = 0;
             }
-            console.log(items)
+            console.log(item[3], typeof item[3])
+            // console.log(items)
             return (
               <Marker key={index} position={[item[3], item[5], item[7]]}>
                 <Popup>{item[0]}</Popup>
