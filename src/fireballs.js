@@ -9,7 +9,7 @@ function Fireballs() {
 
   useEffect(() => {
     fetch(
-      "https://cors-anywhere.herokuapp.com/https://ssd-api.jpl.nasa.gov/fireball.api?limit=15"
+      "https://corsanywherefix.herokuapp.com/https://ssd-api.jpl.nasa.gov/fireball.api?limit=15"
     )
       .then((res) => res.json())
       .then(
