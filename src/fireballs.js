@@ -8,7 +8,7 @@ function Fireballs() {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    fetch("https://fireballmap.herokuapp.com/https://ssd-api.jpl.nasa.gov/fireball.api?limit=15")
+    fetch("https://ssd-api.jpl.nasa.gov/fireball.api?limit=15")
       .then((res) => res.json())
       .then(
         (result) => {
@@ -37,12 +37,17 @@ function Fireballs() {
           />
           {items.map((item, index) => {
             if (item[4] === "S") {
-              item[3] = `-${item[3]}`;
+              // item[3].prepend("-");
+              // item[3] = `-${item[3]}`;
+              item[3] = -item[3];
             } else if (item[6] === "W") {
-              item[5] = `-${item[5]}`;
+              // item[5] = `-${item[5]}`;
+              item[5] = -item[5];
             } else if (!item[3]) {
               item[3] = 0;
             }
+            console.log(item[3].toString(), typeof item[3])
+            console.log(item[5].toString(), typeof item[5])
             return (
               <Marker key={index} position={[item[3], item[5], item[7]]}>
                 <Popup>{item[0]}</Popup>
