@@ -22,7 +22,7 @@ function Fireballs() {
           setError(error);
         }
       );
-  }, []);
+  }, [items]);
 
   if (error) {
     return <div>Error: {error.message}</div>;
