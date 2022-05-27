@@ -22,7 +22,7 @@ function Fireballs() {
           setError(error);
         }
       );
-  }, [items]);
+  }, []);
 
   if (error) {
     return <div>Error: {error.message}</div>;
@@ -45,6 +45,7 @@ function Fireballs() {
             } else if (!item[3]) {
               item[3] = 0;
             }
+            console.log(items)
             return (
               <Marker key={index} position={[item[3], item[5], item[7]]}>
                 <Popup>{item[0]}</Popup>
